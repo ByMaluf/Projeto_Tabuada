@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: url("./img/bk1.jpg");
+  background-size: cover;
+}
+
+.informacoes_tabuada {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+}
+
+.informacoes_tabuada input {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.informacoes_tabuada input:focus {
+  outline: 1px solid #f4b237;
+  border-radius: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  font-family: "Poppins";
+}
+
+.formulario {
+  padding: 60px 60px 0 60px;
+  display: grid;
+  justify-items: center;
+  gap: 15px;
+}
+
+.calcularTabuada,
+.resetTabuada {
+  border: none;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #f4b237;
+  color: #1b1d20;
+  font-family: "Poppins";
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.calcularTabuada:hover,
+.resetTabuada:hover {
+  background-color: #ffe275;
+  transition: 0.3s;
+}
+
+.titulo-tabuada {
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px black;
+}
+
+.tabuada {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+}
+
+.tabuada.visivel {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: 0.3s;
+  color: white;
+  background-color: #1b1d20;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ab7e29;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  background-color: #1b1d20;
+  box-shadow: 0 0 4px 0 #f4b237;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.condicaoNaoAceita {
+  color: #ab7e29;
+  grid-row: 3;
+}
